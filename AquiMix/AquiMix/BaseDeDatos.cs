@@ -21,10 +21,10 @@ namespace AquiMix
             SqlConnection connection = new SqlConnection(cadenaConexion);
             connection.Open();
 
-            SqlParameter parnomus = new SqlParameter("@normus", nomus);
+            SqlParameter parnomus = new SqlParameter("@nomus", nomus);
             SqlParameter parcon = new SqlParameter("@con", con);
 
-            SqlCommand comando = new SqlCommand("select Nombre, Apellido, nivel from Credenciales where usuario = @nomus and psswd collate Latin1_General_CS_AS = @con", connection);
+            SqlCommand comando = new SqlCommand("select Nombre, Apellido, nivel from Credenciales where Usuario = @nomus and psswd collate Latin1_General_CS_AS = @con", connection);
             comando.Parameters.Add(parnomus);
             comando.Parameters.Add(parcon);
 

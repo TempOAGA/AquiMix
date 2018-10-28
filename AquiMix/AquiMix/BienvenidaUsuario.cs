@@ -17,7 +17,7 @@ namespace AquiMix
             InitializeComponent();
             labelUsuario.Text = BaseDeDatos.nombreCompleto;
 
-            string tp = BaseDeDatos.tipoUsuario.ToString();
+            /*string tp = BaseDeDatos.tipoUsuario.ToString();
 
             switch (tp)
             {
@@ -36,12 +36,26 @@ namespace AquiMix
                     panelCajero.Visible = true;
                     panelGerente.Visible = false;
                     break;
-            }
-                
-            /*if(BaseDeDatos.tipoUsuario == "Administrador")
-            {
-
             }*/
+                
+            if(BaseDeDatos.tipoUsuario == "Administrador")
+            {
+                panelAdministrador.Visible = true;
+                panelCajero.Visible = false;
+                panelGerente.Visible = false;
+            }
+            else if(BaseDeDatos.tipoUsuario == "Gerente")
+            {
+                panelAdministrador.Visible = false;
+                panelCajero.Visible = false;
+                panelGerente.Visible = true;
+            }
+            else if(BaseDeDatos.tipoUsuario == "Cajero")
+            {
+                panelAdministrador.Visible = false;
+                panelCajero.Visible = true;
+                panelGerente.Visible = false;
+            }
         }
 
         private void BienvenidaUsuario_FormClosed(object sender, FormClosedEventArgs e)

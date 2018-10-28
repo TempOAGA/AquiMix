@@ -45,7 +45,7 @@ namespace AquiMix
                 {
                     BaseDeDatos bd = new BaseDeDatos();
 
-                    Boolean res = bd.InicioSesion(Usuariotxtbx.Text, Contrasenatxtbx.Text);
+                    Boolean res = bd.InicioSesion(Usuariotxtbx.Text.ToString(), Contrasenatxtbx.Text.ToString());
 
                     if (res)
                     {
