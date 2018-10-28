@@ -49,6 +49,7 @@ namespace AquiMix
 
                     if (res)
                     {
+                        MessageBox.Show("Exito");
                         BienvenidaUsuario bienvenidaUsuario = new BienvenidaUsuario();
                         bienvenidaUsuario.Show();
                         this.Hide();

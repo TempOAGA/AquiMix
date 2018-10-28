@@ -64,6 +64,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BienvenidaUsuario.resx">
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +89,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AquiMixDataSet.xsc">
       <DependentUpon>AquiMixDataSet.xsd</DependentUpon>
@@ -104,6 +114,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\minihotdog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\hotdog.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\papas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\sodas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\hd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
