@@ -16,13 +16,19 @@ namespace AquiMix
         {
             InitializeComponent();
             Hotdoglbl.Text = Csencillo.ToString();
-            HDJumbo.Text = CJumbo.ToString();
+            HDJumbolbl.Text = CJumbo.ToString();
             HTDoblelbl.Text = CDoble.ToString();
+            Papaslbl.Text = CPapas.ToString();
+            ChileTocinolbl.Text = CChile.ToString();
+            Sodalbl.Text = CSoda.ToString();
         }
 
         public static int Csencillo = 0;
         public static int CDoble = 0;
         public static int CJumbo = 0;
+        public static int CPapas = 0;
+        public static int CChile = 0;
+        public static int CSoda = 0;
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -34,8 +40,15 @@ namespace AquiMix
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Csencillo--;
-            Hotdoglbl.Text = Csencillo.ToString();
+            if(Csencillo <= 0)
+            {
+                Csencillo = 0;
+            }
+            else
+            {
+                Csencillo--;
+                Hotdoglbl.Text = Csencillo.ToString();
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -56,6 +69,84 @@ namespace AquiMix
                 HTDoblelbl.Text = CDoble.ToString();
             }
             
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            CJumbo++;
+            HDJumbolbl.Text = CJumbo.ToString();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if(CJumbo <= 0)
+            {
+                CJumbo = 0;
+            }
+            else
+            {
+                CJumbo++;
+                HDJumbolbl.Text = CJumbo.ToString();
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            CPapas++;
+            Papaslbl.Text = CPapas.ToString();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if(CPapas <= 0)
+            {
+                CPapas = 0;
+            }
+            else
+            {
+                CPapas--;
+                Papaslbl.Text = CPapas.ToString();
+            }
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            CChile++;
+            ChileTocinolbl.Text = CChile.ToString();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if(CChile <= 0)
+            {
+                CChile = 0;
+                ChileTocinolbl.Text = CChile.ToString();
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            CSoda++;
+            Sodalbl.Text = CSoda.ToString();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            if (CSoda <= 0)
+            {
+                CSoda = 0;
+            }
+            else
+            {
+                CSoda--;
+                Sodalbl.Text = CSoda.ToString();
+            }
+        }
+
+        private void Pagarbtn_Click(object sender, EventArgs e)
+        {
+            Cobro cobro = new Cobro();
+            cobro.Show();
         }
     }
 }

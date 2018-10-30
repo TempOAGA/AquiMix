@@ -40,7 +40,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.HDJumbo = new System.Windows.Forms.Label();
+            this.HDJumbolbl = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.btn10 = new System.Windows.Forms.Button();
@@ -71,6 +71,8 @@
             this.ListaOrdenrtbx = new System.Windows.Forms.RichTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.Totaltbx = new System.Windows.Forms.TextBox();
+            this.Confirmarbtn = new System.Windows.Forms.Button();
+            this.Pagarbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -191,15 +193,15 @@
             this.button9.TabIndex = 4;
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // HDJumbo
+            // HDJumbolbl
             // 
-            this.HDJumbo.AutoSize = true;
-            this.HDJumbo.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HDJumbo.Location = new System.Drawing.Point(992, 171);
-            this.HDJumbo.Name = "HDJumbo";
-            this.HDJumbo.Size = new System.Drawing.Size(23, 25);
-            this.HDJumbo.TabIndex = 11;
-            this.HDJumbo.Text = "0";
+            this.HDJumbolbl.AutoSize = true;
+            this.HDJumbolbl.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HDJumbolbl.Location = new System.Drawing.Point(992, 171);
+            this.HDJumbolbl.Name = "HDJumbolbl";
+            this.HDJumbolbl.Size = new System.Drawing.Size(23, 25);
+            this.HDJumbolbl.TabIndex = 11;
+            this.HDJumbolbl.Text = "0";
             // 
             // button10
             // 
@@ -210,6 +212,7 @@
             this.button10.Size = new System.Drawing.Size(30, 30);
             this.button10.TabIndex = 10;
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button11
             // 
@@ -220,6 +223,7 @@
             this.button11.Size = new System.Drawing.Size(30, 30);
             this.button11.TabIndex = 9;
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // btn10
             // 
@@ -248,6 +252,7 @@
             this.button13.Size = new System.Drawing.Size(30, 30);
             this.button13.TabIndex = 14;
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -258,6 +263,7 @@
             this.button14.Size = new System.Drawing.Size(30, 30);
             this.button14.TabIndex = 13;
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -286,6 +292,7 @@
             this.button16.Size = new System.Drawing.Size(30, 30);
             this.button16.TabIndex = 18;
             this.button16.UseVisualStyleBackColor = false;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button17
             // 
@@ -296,6 +303,7 @@
             this.button17.Size = new System.Drawing.Size(30, 30);
             this.button17.TabIndex = 17;
             this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
             // button18
             // 
@@ -324,6 +332,7 @@
             this.button19.Size = new System.Drawing.Size(30, 30);
             this.button19.TabIndex = 22;
             this.button19.UseVisualStyleBackColor = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // button20
             // 
@@ -334,6 +343,7 @@
             this.button20.Size = new System.Drawing.Size(30, 30);
             this.button20.TabIndex = 21;
             this.button20.UseVisualStyleBackColor = false;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
             // 
             // button21
             // 
@@ -470,7 +480,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(335, 550);
+            this.label10.Location = new System.Drawing.Point(318, 552);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 28);
             this.label10.TabIndex = 37;
@@ -479,17 +489,40 @@
             // Totaltbx
             // 
             this.Totaltbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Totaltbx.Location = new System.Drawing.Point(430, 546);
+            this.Totaltbx.Location = new System.Drawing.Point(415, 549);
             this.Totaltbx.Name = "Totaltbx";
             this.Totaltbx.ReadOnly = true;
             this.Totaltbx.Size = new System.Drawing.Size(139, 31);
             this.Totaltbx.TabIndex = 38;
+            // 
+            // Confirmarbtn
+            // 
+            this.Confirmarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Confirmarbtn.Location = new System.Drawing.Point(816, 611);
+            this.Confirmarbtn.Name = "Confirmarbtn";
+            this.Confirmarbtn.Size = new System.Drawing.Size(121, 33);
+            this.Confirmarbtn.TabIndex = 39;
+            this.Confirmarbtn.Text = "Confirmar";
+            this.Confirmarbtn.UseVisualStyleBackColor = true;
+            // 
+            // Pagarbtn
+            // 
+            this.Pagarbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pagarbtn.Location = new System.Drawing.Point(943, 611);
+            this.Pagarbtn.Name = "Pagarbtn";
+            this.Pagarbtn.Size = new System.Drawing.Size(121, 33);
+            this.Pagarbtn.TabIndex = 40;
+            this.Pagarbtn.Text = "Pagar";
+            this.Pagarbtn.UseVisualStyleBackColor = true;
+            this.Pagarbtn.Click += new System.EventHandler(this.Pagarbtn_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 666);
+            this.Controls.Add(this.Pagarbtn);
+            this.Controls.Add(this.Confirmarbtn);
             this.Controls.Add(this.Totaltbx);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.ListaOrdenrtbx);
@@ -517,7 +550,7 @@
             this.Controls.Add(this.button13);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.button15);
-            this.Controls.Add(this.HDJumbo);
+            this.Controls.Add(this.HDJumbolbl);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.btn10);
@@ -554,7 +587,7 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label HDJumbo;
+        private System.Windows.Forms.Label HDJumbolbl;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button btn10;
@@ -585,5 +618,7 @@
         private System.Windows.Forms.RichTextBox ListaOrdenrtbx;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox Totaltbx;
+        private System.Windows.Forms.Button Confirmarbtn;
+        private System.Windows.Forms.Button Pagarbtn;
     }
 }
