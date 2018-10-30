@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace AquiMix
 {
+    
     public partial class Menu : Form
     {
         public Menu()
@@ -21,8 +22,11 @@ namespace AquiMix
             Papaslbl.Text = CPapas.ToString();
             ChileTocinolbl.Text = CChile.ToString();
             Sodalbl.Text = CSoda.ToString();
+            Totaltbx.Text = "100";
         }
 
+        //variables
+        private string total;
         private static int csencillo = 0;
         private static int cDoble = 0;
         private static int cJumbo = 0;
@@ -33,7 +37,8 @@ namespace AquiMix
         private static int cDoblePapas = 0;
         private static int cJumboPapas = 0;
         private static int Ensalada = 0;
-
+       
+        //get set
         public static int Csencillo { get => csencillo; set => csencillo = value; }
         public static int CDoble { get => cDoble; set => cDoble = value; }
         public static int CJumbo { get => cJumbo; set => cJumbo = value; }
@@ -44,6 +49,7 @@ namespace AquiMix
         public static int CDoblePapas { get => cDoblePapas; set => cDoblePapas = value; }
         public static int CJumboPapas { get => cJumboPapas; set => cJumboPapas = value; }
         public static int Ensalada1 { get => Ensalada; set => Ensalada = value; }
+        public string Total { get => this.total; set => total = value; }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -135,6 +141,10 @@ namespace AquiMix
             if(CChile <= 0)
             {
                 CChile = 0;
+            }
+            else
+            {
+                CChile--;
                 ChileTocinolbl.Text = CChile.ToString();
             }
         }
@@ -160,6 +170,7 @@ namespace AquiMix
 
         private void Pagarbtn_Click(object sender, EventArgs e)
         {
+            Total = Totaltbx.Text;
             Cobro cobro = new Cobro();
             cobro.Show();
         }

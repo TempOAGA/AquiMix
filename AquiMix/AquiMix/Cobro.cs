@@ -16,7 +16,7 @@ namespace AquiMix
         public Cobro()
         {
             InitializeComponent();
-            Totaltbx.Text = "200";
+            //Totaltbx.Text = "200";
         }
 
         private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
@@ -38,6 +38,12 @@ namespace AquiMix
         {
             int c = MetodoCobrar(Convert.ToInt32(Totaltbx.Text.ToString()), Convert.ToInt32(Dinerotbx.Text.ToString()));
             Cambiotbx.Text = c.ToString();
+        }
+
+        private void Cobro_Load(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            Totaltbx.Text = menu.Total();
         }
     }
 }

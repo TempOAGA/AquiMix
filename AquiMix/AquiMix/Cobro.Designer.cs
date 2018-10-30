@@ -96,6 +96,7 @@
             this.Name = "Cobro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobro";
+            this.Load += new System.EventHandler(this.Cobro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
