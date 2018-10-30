@@ -148,5 +148,25 @@ namespace AquiMix
             Cobro cobro = new Cobro();
             cobro.Show();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Csencillo = 0;
+            CDoble = 0;
+            CJumbo = 0;
+            CPapas = 0;
+            CChile = 0;
+            CSoda = 0;
+
+            Hotdoglbl.Text = "0";
+            HDJumbolbl.Text = "0";
+            HTDoblelbl.Text = "0";
+            Papaslbl.Text = "0";
+            ChileTocinolbl.Text = "0";
+            Sodalbl.Text = "0";
+
+            ListaOrdenrtbx.Clear();
+        }
+
     }
 }

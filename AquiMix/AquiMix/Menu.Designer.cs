@@ -73,6 +73,7 @@
             this.Totaltbx = new System.Windows.Forms.TextBox();
             this.Confirmarbtn = new System.Windows.Forms.Button();
             this.Pagarbtn = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -516,11 +517,23 @@
             this.Pagarbtn.UseVisualStyleBackColor = true;
             this.Pagarbtn.Click += new System.EventHandler(this.Pagarbtn_Click);
             // 
+            // button12
+            // 
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Location = new System.Drawing.Point(655, 611);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(155, 33);
+            this.button12.TabIndex = 41;
+            this.button12.Text = "Nueva Orden";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 666);
+            this.Controls.Add(this.button12);
             this.Controls.Add(this.Pagarbtn);
             this.Controls.Add(this.Confirmarbtn);
             this.Controls.Add(this.Totaltbx);
@@ -620,5 +633,6 @@
         private System.Windows.Forms.TextBox Totaltbx;
         private System.Windows.Forms.Button Confirmarbtn;
         private System.Windows.Forms.Button Pagarbtn;
+        private System.Windows.Forms.Button button12;
     }
 }
