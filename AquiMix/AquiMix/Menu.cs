@@ -23,12 +23,19 @@ namespace AquiMix
             Sodalbl.Text = CSoda.ToString();
         }
 
-        public static int Csencillo = 0;
-        public static int CDoble = 0;
-        public static int CJumbo = 0;
-        public static int CPapas = 0;
-        public static int CChile = 0;
-        public static int CSoda = 0;
+        private static int csencillo = 0;
+        private static int cDoble = 0;
+        private static int cJumbo = 0;
+        private static int cPapas = 0;
+        private static int cChile = 0;
+        private static int cSoda = 0;
+
+        public static int Csencillo { get => csencillo; set => csencillo = value; }
+        public static int CDoble { get => cDoble; set => cDoble = value; }
+        public static int CJumbo { get => cJumbo; set => cJumbo = value; }
+        public static int CPapas { get => cPapas; set => cPapas = value; }
+        public static int CChile { get => cChile; set => cChile = value; }
+        public static int CSoda { get => cSoda; set => cSoda = value; }
 
         private void button5_Click(object sender, EventArgs e)
         {
