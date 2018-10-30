@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.Dinerotbx = new System.Windows.Forms.TextBox();
+            this.Totaltbx = new System.Windows.Forms.TextBox();
+            this.Cambiotbx = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -55,43 +55,46 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "CAMBIO";
             // 
-            // textBox1
+            // Dinerotbx
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(120, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(124, 31);
-            this.textBox1.TabIndex = 3;
+            this.Dinerotbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dinerotbx.Location = new System.Drawing.Point(62, 26);
+            this.Dinerotbx.Name = "Dinerotbx";
+            this.Dinerotbx.Size = new System.Drawing.Size(124, 31);
+            this.Dinerotbx.TabIndex = 5;
+            this.Dinerotbx.TextChanged += new System.EventHandler(this.Dinerotbx_TextChanged);
+            this.Dinerotbx.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
-            // textBox2
+            // Totaltbx
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(120, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(124, 31);
-            this.textBox2.TabIndex = 4;
+            this.Totaltbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totaltbx.Location = new System.Drawing.Point(124, 72);
+            this.Totaltbx.Name = "Totaltbx";
+            this.Totaltbx.ReadOnly = true;
+            this.Totaltbx.Size = new System.Drawing.Size(124, 31);
+            this.Totaltbx.TabIndex = 6;
             // 
-            // textBox3
+            // Cambiotbx
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(62, 26);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 31);
-            this.textBox3.TabIndex = 5;
+            this.Cambiotbx.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cambiotbx.Location = new System.Drawing.Point(124, 109);
+            this.Cambiotbx.Name = "Cambiotbx";
+            this.Cambiotbx.ReadOnly = true;
+            this.Cambiotbx.Size = new System.Drawing.Size(124, 31);
+            this.Cambiotbx.TabIndex = 7;
             // 
             // Cobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(260, 159);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Cambiotbx);
+            this.Controls.Add(this.Totaltbx);
+            this.Controls.Add(this.Dinerotbx);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Cobro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cobro";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,8 +105,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Dinerotbx;
+        private System.Windows.Forms.TextBox Totaltbx;
+        private System.Windows.Forms.TextBox Cambiotbx;
     }
 }
