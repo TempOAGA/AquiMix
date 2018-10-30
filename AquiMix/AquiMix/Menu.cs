@@ -29,6 +29,10 @@ namespace AquiMix
         private static int cPapas = 0;
         private static int cChile = 0;
         private static int cSoda = 0;
+        private static int cSencilloPapas = 0;
+        private static int cDoblePapas = 0;
+        private static int cJumboPapas = 0;
+        private static int Ensalada = 0;
 
         public static int Csencillo { get => csencillo; set => csencillo = value; }
         public static int CDoble { get => cDoble; set => cDoble = value; }
@@ -36,6 +40,10 @@ namespace AquiMix
         public static int CPapas { get => cPapas; set => cPapas = value; }
         public static int CChile { get => cChile; set => cChile = value; }
         public static int CSoda { get => cSoda; set => cSoda = value; }
+        public static int CSencilloPapas { get => cSencilloPapas; set => cSencilloPapas = value; }
+        public static int CDoblePapas { get => cDoblePapas; set => cDoblePapas = value; }
+        public static int CJumboPapas { get => cJumboPapas; set => cJumboPapas = value; }
+        public static int Ensalada1 { get => Ensalada; set => Ensalada = value; }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -92,7 +100,7 @@ namespace AquiMix
             }
             else
             {
-                CJumbo++;
+                CJumbo--;
                 HDJumbolbl.Text = CJumbo.ToString();
             }
         }
