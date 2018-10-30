@@ -170,7 +170,6 @@ namespace AquiMix
 
         private void Pagarbtn_Click(object sender, EventArgs e)
         {
-            Total = Totaltbx.Text;
             Cobro cobro = new Cobro();
             cobro.Show();
         }
@@ -194,5 +193,9 @@ namespace AquiMix
             ListaOrdenrtbx.Clear();
         }
 
+        private void Totaltbx_TextChanged(object sender, EventArgs e)
+        {
+            Total = Totaltbx.Text;
+        }
     }
 }

@@ -494,6 +494,7 @@
             this.Totaltbx.ReadOnly = true;
             this.Totaltbx.Size = new System.Drawing.Size(139, 31);
             this.Totaltbx.TabIndex = 38;
+            this.Totaltbx.TextChanged += new System.EventHandler(this.Totaltbx_TextChanged);
             // 
             // Confirmarbtn
             // 
