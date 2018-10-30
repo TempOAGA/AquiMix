@@ -43,7 +43,7 @@ namespace AquiMix
         private void Cobro_Load(object sender, EventArgs e)
         {
             Menu menu = new Menu();
-            Totaltbx.Text = menu.Total();
+            Totaltbx.Text = menu.Total;
         }
     }
 }
