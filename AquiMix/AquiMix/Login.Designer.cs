@@ -28,18 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Usuariotxtbx = new System.Windows.Forms.TextBox();
-            this.credencialesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aquiMixDataSet = new AquiMix.AquiMixDataSet();
             this.Contrasenatxtbx = new System.Windows.Forms.TextBox();
             this.UserName = new System.Windows.Forms.Label();
             this.Psswd = new System.Windows.Forms.Label();
             this.Loginbtn = new System.Windows.Forms.Button();
             this.ShowPsswdckbx = new System.Windows.Forms.CheckBox();
-            this.credencialesTableAdapter = new AquiMix.AquiMixDataSetTableAdapters.CredencialesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.credencialesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aquiMixDataSet)).BeginInit();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Usuariotxtbx
@@ -49,20 +44,10 @@
             this.Usuariotxtbx.Name = "Usuariotxtbx";
             this.Usuariotxtbx.Size = new System.Drawing.Size(180, 28);
             this.Usuariotxtbx.TabIndex = 0;
-            // 
-            // credencialesBindingSource
-            // 
-            this.credencialesBindingSource.DataMember = "Credenciales";
-            this.credencialesBindingSource.DataSource = this.aquiMixDataSet;
-            // 
-            // aquiMixDataSet
-            // 
-            this.aquiMixDataSet.DataSetName = "AquiMixDataSet";
-            this.aquiMixDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.Usuariotxtbx.TextChanged += new System.EventHandler(this.Usuariotxtbx_TextChanged);
             // 
             // Contrasenatxtbx
             // 
-            this.Contrasenatxtbx.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.credencialesBindingSource, "Contrasena", true));
             this.Contrasenatxtbx.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contrasenatxtbx.Location = new System.Drawing.Point(167, 79);
             this.Contrasenatxtbx.Name = "Contrasenatxtbx";
@@ -111,9 +96,15 @@
             this.ShowPsswdckbx.UseVisualStyleBackColor = true;
             this.ShowPsswdckbx.CheckedChanged += new System.EventHandler(this.ShowPsswdckbx_CheckedChanged);
             // 
-            // credencialesTableAdapter
+            // button1
             // 
-            this.credencialesTableAdapter.ClearBeforeFill = true;
+            this.button1.Location = new System.Drawing.Point(271, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Login
             // 
@@ -121,6 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(485, 129);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ShowPsswdckbx);
             this.Controls.Add(this.Loginbtn);
             this.Controls.Add(this.Psswd);
@@ -131,8 +123,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AquiMix";
             this.Load += new System.EventHandler(this.Login_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.credencialesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aquiMixDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,9 +136,7 @@
         private System.Windows.Forms.Label Psswd;
         private System.Windows.Forms.Button Loginbtn;
         private System.Windows.Forms.CheckBox ShowPsswdckbx;
-        private AquiMixDataSet aquiMixDataSet;
-        private System.Windows.Forms.BindingSource credencialesBindingSource;
-        private AquiMixDataSetTableAdapters.CredencialesTableAdapter credencialesTableAdapter;
+        private System.Windows.Forms.Button button1;
     }
 }
 

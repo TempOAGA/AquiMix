@@ -12,10 +12,17 @@ namespace AquiMix
 {
     public partial class BienvenidaUsuario : Form
     {
+        private string user;
+
+        public string User { get => user; set => user = value; }
+
         public BienvenidaUsuario()
         {
             InitializeComponent();
             labelUsuario.Text = BaseDeDatos.nombreCompleto;
+            
+            
+            
 
             /*string tp = BaseDeDatos.tipoUsuario.ToString();
 
@@ -37,6 +44,7 @@ namespace AquiMix
                     panelGerente.Visible = false;
                     break;
             }*/
+
                 
             if(BaseDeDatos.tipoUsuario == "Administrador")
             {
@@ -61,6 +69,33 @@ namespace AquiMix
         private void BienvenidaUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void BienvenidaUsuario_Load(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            user = login.Usuario;
         }
     }
 }
