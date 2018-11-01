@@ -16,5 +16,17 @@ namespace AquiMix
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Bienvenidabtn_Click(object sender, EventArgs e)
+        {
+            BienvenidaUsuario bienvenida = new BienvenidaUsuario();
+            bienvenida.Show();
+            this.Close();
+        }
     }
 }

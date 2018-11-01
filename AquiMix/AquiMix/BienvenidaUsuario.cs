@@ -110,5 +110,12 @@ namespace AquiMix
             Login login = new Login();
             user = login.Usuario;
         }
+
+        private void Inventariobtn_Click(object sender, EventArgs e)
+        {
+            inventario inv = new inventario();
+            inv.Show();
+            this.Hide();
+        }
     }
 }
