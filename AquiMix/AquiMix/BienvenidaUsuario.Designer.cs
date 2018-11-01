@@ -30,17 +30,18 @@
         {
             this.labelUsuario = new System.Windows.Forms.Label();
             this.Admingbx = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.Gerentegbx = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.Cajerogbx = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.Inventariobtn = new System.Windows.Forms.Button();
             this.Admingbx.SuspendLayout();
             this.Gerentegbx.SuspendLayout();
             this.Cajerogbx.SuspendLayout();
@@ -58,15 +59,36 @@
             // 
             // Admingbx
             // 
+            this.Admingbx.Controls.Add(this.Inventariobtn);
             this.Admingbx.Controls.Add(this.dateTimePicker4);
             this.Admingbx.Controls.Add(this.button2);
             this.Admingbx.Controls.Add(this.label1);
-            this.Admingbx.Location = new System.Drawing.Point(12, 71);
+            this.Admingbx.Location = new System.Drawing.Point(0, 0);
             this.Admingbx.Name = "Admingbx";
             this.Admingbx.Size = new System.Drawing.Size(428, 186);
             this.Admingbx.TabIndex = 4;
             this.Admingbx.TabStop = false;
             this.Admingbx.Text = " ";
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker4.Location = new System.Drawing.Point(52, 68);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(318, 28);
+            this.dateTimePicker4.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(52, 127);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(93, 37);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Menu";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -78,32 +100,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Administrador";
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(52, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 37);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Menu";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.CalendarFont = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Location = new System.Drawing.Point(52, 68);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(318, 28);
-            this.dateTimePicker4.TabIndex = 2;
-            // 
             // Gerentegbx
             // 
+            this.Gerentegbx.Controls.Add(this.Admingbx);
             this.Gerentegbx.Controls.Add(this.dateTimePicker1);
-            this.Gerentegbx.Controls.Add(this.Cajerogbx);
             this.Gerentegbx.Controls.Add(this.button1);
             this.Gerentegbx.Controls.Add(this.label2);
-            this.Gerentegbx.Location = new System.Drawing.Point(12, 71);
+            this.Gerentegbx.Location = new System.Drawing.Point(0, 0);
             this.Gerentegbx.Name = "Gerentegbx";
             this.Gerentegbx.Size = new System.Drawing.Size(428, 186);
             this.Gerentegbx.TabIndex = 5;
@@ -119,33 +122,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(318, 28);
             this.dateTimePicker1.TabIndex = 2;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(52, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 37);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Menu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(154, 23);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 31);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Gerente";
-            // 
             // Cajerogbx
             // 
+            this.Cajerogbx.Controls.Add(this.Gerentegbx);
             this.Cajerogbx.Controls.Add(this.dateTimePicker2);
             this.Cajerogbx.Controls.Add(this.button3);
             this.Cajerogbx.Controls.Add(this.label3);
-            this.Cajerogbx.Location = new System.Drawing.Point(6, 0);
+            this.Cajerogbx.Location = new System.Drawing.Point(12, 52);
             this.Cajerogbx.Name = "Cajerogbx";
             this.Cajerogbx.Size = new System.Drawing.Size(428, 186);
             this.Cajerogbx.TabIndex = 6;
@@ -182,15 +165,47 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Cajero";
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(52, 127);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(93, 37);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Menu";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(154, 23);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Gerente";
+            // 
+            // Inventariobtn
+            // 
+            this.Inventariobtn.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventariobtn.Location = new System.Drawing.Point(168, 127);
+            this.Inventariobtn.Name = "Inventariobtn";
+            this.Inventariobtn.Size = new System.Drawing.Size(113, 37);
+            this.Inventariobtn.TabIndex = 3;
+            this.Inventariobtn.Text = "Inventario";
+            this.Inventariobtn.UseVisualStyleBackColor = true;
+            this.Inventariobtn.Click += new System.EventHandler(this.Inventariobtn_Click);
+            // 
             // BienvenidaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 269);
-            this.Controls.Add(this.Gerentegbx);
-            this.Controls.Add(this.Admingbx);
+            this.ClientSize = new System.Drawing.Size(450, 244);
             this.Controls.Add(this.labelUsuario);
+            this.Controls.Add(this.Cajerogbx);
             this.Name = "BienvenidaUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BienvenidaUsuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BienvenidaUsuario_FormClosed);
             this.Load += new System.EventHandler(this.BienvenidaUsuario_Load);
@@ -220,5 +235,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button Inventariobtn;
     }
 }

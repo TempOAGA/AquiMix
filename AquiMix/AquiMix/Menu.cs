@@ -22,7 +22,7 @@ namespace AquiMix
             Papaslbl.Text = CPapas.ToString();
             ChileTocinolbl.Text = CChile.ToString();
             Sodalbl.Text = CSoda.ToString();
-            Totaltbx.Text = "100";
+            Totaltbx.Text = "";
         }
 
         //variables
@@ -196,6 +196,11 @@ namespace AquiMix
         private void Totaltbx_TextChanged(object sender, EventArgs e)
         {
             Total = Totaltbx.Text;
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
