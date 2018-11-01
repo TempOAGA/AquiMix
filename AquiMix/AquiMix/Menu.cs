@@ -22,7 +22,7 @@ namespace AquiMix
             Papaslbl.Text = CPapas.ToString();
             ChileTocinolbl.Text = CChile.ToString();
             Sodalbl.Text = CSoda.ToString();
-            Totaltbx.Text = "100";
+            Totaltbx.Text = "";
         }
 
         //variables
