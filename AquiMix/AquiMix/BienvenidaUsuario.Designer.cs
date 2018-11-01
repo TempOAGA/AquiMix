@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.labelUsuario = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Admingbx = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Gerentegbx = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Cajerogbx = new System.Windows.Forms.GroupBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.button3 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.Admingbx.SuspendLayout();
+            this.Gerentegbx.SuspendLayout();
+            this.Cajerogbx.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelUsuario
@@ -56,18 +56,17 @@
             this.labelUsuario.TabIndex = 0;
             this.labelUsuario.Text = "Usuario";
             // 
-            // groupBox1
+            // Admingbx
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Controls.Add(this.dateTimePicker4);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 71);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(428, 186);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = " ";
+            this.Admingbx.Controls.Add(this.dateTimePicker4);
+            this.Admingbx.Controls.Add(this.button2);
+            this.Admingbx.Controls.Add(this.label1);
+            this.Admingbx.Location = new System.Drawing.Point(12, 71);
+            this.Admingbx.Name = "Admingbx";
+            this.Admingbx.Size = new System.Drawing.Size(428, 186);
+            this.Admingbx.TabIndex = 4;
+            this.Admingbx.TabStop = false;
+            this.Admingbx.Text = " ";
             // 
             // label1
             // 
@@ -98,17 +97,18 @@
             this.dateTimePicker4.Size = new System.Drawing.Size(318, 28);
             this.dateTimePicker4.TabIndex = 2;
             // 
-            // groupBox2
+            // Gerentegbx
             // 
-            this.groupBox2.Controls.Add(this.dateTimePicker1);
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(428, 186);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = " ";
+            this.Gerentegbx.Controls.Add(this.dateTimePicker1);
+            this.Gerentegbx.Controls.Add(this.Cajerogbx);
+            this.Gerentegbx.Controls.Add(this.button1);
+            this.Gerentegbx.Controls.Add(this.label2);
+            this.Gerentegbx.Location = new System.Drawing.Point(12, 71);
+            this.Gerentegbx.Name = "Gerentegbx";
+            this.Gerentegbx.Size = new System.Drawing.Size(428, 186);
+            this.Gerentegbx.TabIndex = 5;
+            this.Gerentegbx.TabStop = false;
+            this.Gerentegbx.Text = " ";
             // 
             // dateTimePicker1
             // 
@@ -140,17 +140,17 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Gerente";
             // 
-            // groupBox3
+            // Cajerogbx
             // 
-            this.groupBox3.Controls.Add(this.dateTimePicker2);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Location = new System.Drawing.Point(12, 71);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(428, 186);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = " ";
+            this.Cajerogbx.Controls.Add(this.dateTimePicker2);
+            this.Cajerogbx.Controls.Add(this.button3);
+            this.Cajerogbx.Controls.Add(this.label3);
+            this.Cajerogbx.Location = new System.Drawing.Point(6, 0);
+            this.Cajerogbx.Name = "Cajerogbx";
+            this.Cajerogbx.Size = new System.Drawing.Size(428, 186);
+            this.Cajerogbx.TabIndex = 6;
+            this.Cajerogbx.TabStop = false;
+            this.Cajerogbx.Text = " ";
             // 
             // dateTimePicker2
             // 
@@ -187,19 +187,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 269);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Gerentegbx);
+            this.Controls.Add(this.Admingbx);
             this.Controls.Add(this.labelUsuario);
             this.Name = "BienvenidaUsuario";
             this.Text = "BienvenidaUsuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BienvenidaUsuario_FormClosed);
             this.Load += new System.EventHandler(this.BienvenidaUsuario_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.Admingbx.ResumeLayout(false);
+            this.Admingbx.PerformLayout();
+            this.Gerentegbx.ResumeLayout(false);
+            this.Gerentegbx.PerformLayout();
+            this.Cajerogbx.ResumeLayout(false);
+            this.Cajerogbx.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,15 +208,15 @@
         #endregion
 
         private System.Windows.Forms.Label labelUsuario;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox Admingbx;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox Gerentegbx;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox Cajerogbx;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label3;

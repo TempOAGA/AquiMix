@@ -97,7 +97,6 @@ namespace AquiMix
         private void Usuariotxtbx_TextChanged(object sender, EventArgs e)
         {
             Usuario = Usuariotxtbx.Text;
-
         }
     }
 }

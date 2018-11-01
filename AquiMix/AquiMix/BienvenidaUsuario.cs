@@ -12,40 +12,53 @@ namespace AquiMix
 {
     public partial class BienvenidaUsuario : Form
     {
-        private string user;
-
-        public string User { get => user; set => user = value; }
+        public string user;
 
         public BienvenidaUsuario()
         {
             InitializeComponent();
             labelUsuario.Text = BaseDeDatos.nombreCompleto;
-            
-            
-            
-
-            /*string tp = BaseDeDatos.tipoUsuario.ToString();
-
-            switch (tp)
+            if(user == "Admin")
             {
-                case "Administrador":
-                    panelAdministrador.Visible = true;
-                    panelCajero.Visible = false;
-                    panelGerente.Visible = false;
-                    break;
-                case "Gerente":
-                    panelAdministrador.Visible = false;
-                    panelCajero.Visible = false;
-                    panelGerente.Visible = true;
-                    break;
-                case "Cajero":
-                    panelAdministrador.Visible = false;
-                    panelCajero.Visible = true;
-                    panelGerente.Visible = false;
-                    break;
-            }*/
-
-                
+                //Admingbx.Show();
+                Admingbx.Visible = true;
+                //Gerentegbx.Hide();
+                //Cajerogbx.Hide();
+                Gerentegbx.Visible = false;
+                Cajerogbx.Visible = false;
+            }else if(user == "Gerente")
+            {
+                Admingbx.Visible = false;
+                Gerentegbx.Visible = true;
+                Cajerogbx.Visible = false;
+            }else if(user == "Cajero")
+            {
+                Admingbx.Visible = false;
+                Gerentegbx.Visible = false;
+                Cajerogbx.Visible = true;
+            }
+            /*
+                switch (user)
+                {
+                    case "Admin":
+                        Admingbx.Visible = true;
+                        Gerentegbx.Visible = false;
+                        Cajerogbx.Visible = false;
+                        break;
+                    case "Gerente":
+                        Admingbx.Visible = false;
+                        Gerentegbx.Visible = true;
+                        Cajerogbx.Visible = false;
+                        break;
+                    case "Cajero":
+                        Admingbx.Visible = false;
+                        Gerentegbx.Visible = false;
+                        Cajerogbx.Visible = true;
+                        break;
+                    default:
+                        break;
+                }*/
+            /*   
             if(BaseDeDatos.tipoUsuario == "Administrador")
             {
                 panelAdministrador.Visible = true;
@@ -63,7 +76,7 @@ namespace AquiMix
                 panelAdministrador.Visible = false;
                 panelCajero.Visible = true;
                 panelGerente.Visible = false;
-            }
+            }*/
         }
 
         private void BienvenidaUsuario_FormClosed(object sender, FormClosedEventArgs e)
