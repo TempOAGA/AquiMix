@@ -64,6 +64,12 @@
     <Compile Include="Cobro.Designer.cs">
       <DependentUpon>Cobro.cs</DependentUpon>
     </Compile>
+    <Compile Include="inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inventario.Designer.cs">
+      <DependentUpon>inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Cobro.resx">
       <DependentUpon>Cobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inventario.resx">
+      <DependentUpon>inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
