@@ -197,5 +197,10 @@ namespace AquiMix
         {
             Total = Totaltbx.Text;
         }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
