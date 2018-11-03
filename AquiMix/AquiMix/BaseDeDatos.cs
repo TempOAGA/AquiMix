@@ -10,7 +10,7 @@ namespace AquiMix
 {
     class BaseDeDatos
     {
-        private string cadenaConexion = "Data Source=LAPTOP-F6H1TLU1/SQLEXPRESS;Initial Catalog=AquiMix;Persist Security Info=True;User ID=sa;Password=ith123";
+        private string cadenaConexion = @"Data Source=LAPTOP-F6H1TLU1\SQLEXPRESS;Initial Catalog=AquiMix;Persist Security Info=True;User ID=sa;Password=ith123";
 
         public static string nombreCompleto = "";
         public static string tipoUsuario = "";
@@ -20,24 +20,24 @@ namespace AquiMix
             nombreCompleto = "";
             tipoUsuario = "";
 
-            SqlConnection conexion = new SqlConnection(cadenaConexion);
+            SqlConnection conx = new SqlConnection(cadenaConexion);
 
             try
             {
-                conexion.Open();
+                conx.Open();
                 MessageBox.Show("Se logro");
-                conexion.Close();
+                conx.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se logro");
             }
-            conexion.Open();
+            conx.Open();
 
             SqlParameter parnomus = new SqlParameter("@nomus", nomus);
             SqlParameter parcon = new SqlParameter("@con", con);
 
-            SqlCommand comando = new SqlCommand("select Nombre, Apellido, nivel from Credenciales where Usuario = @nomus and psswd collate Latin1_General_CS_AS = @con", conexion);
+            SqlCommand comando = new SqlCommand("select nombre, apellido, nivel from Credenciales where [user] = @nomus and password collate Latin1_General_CS_AS = @con", conx);
             comando.Parameters.Add(parnomus);
             comando.Parameters.Add(parcon);
 
@@ -49,8 +49,8 @@ namespace AquiMix
             }
 
             lector.Close();
-            conexion.Close();
-
+            conx.Close();
+            
             if (String.IsNullOrEmpty(tipoUsuario))
             {
                 return false;

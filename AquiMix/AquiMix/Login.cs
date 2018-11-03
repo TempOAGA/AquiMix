@@ -45,10 +45,7 @@ namespace AquiMix
         {
             if(!String.IsNullOrEmpty(Usuariotxtbx.Text) && !String.IsNullOrEmpty(Contrasenatxtbx.Text))
             {
-                BienvenidaUsuario bienvenida = new BienvenidaUsuario();
-                bienvenida.Show();
-                this.Hide();
-                /*try
+                try
                 {
                     BaseDeDatos bd = new BaseDeDatos();
 
@@ -69,7 +66,7 @@ namespace AquiMix
                 catch
                 {
                     MessageBox.Show("Error");
-                }*/
+                }
             }
             else
             {
@@ -97,6 +94,19 @@ namespace AquiMix
         private void Usuariotxtbx_TextChanged(object sender, EventArgs e)
         {
             Usuario = Usuariotxtbx.Text;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            string stringConexion;
+            SqlConnection conx;
+
+            stringConexion = @"Data Source=LAPTOP-F6H1TLU1\SQLEXPRESS;Initial Catalog=AquiMix;Persist Security Info=True;User ID=sa;Password=ith123";
+
+            conx = new SqlConnection(stringConexion);
+            conx.Open();
+            MessageBox.Show("Si");
+            conx.Close();
         }
     }
 }

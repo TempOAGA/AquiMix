@@ -34,6 +34,7 @@
             this.Psswd = new System.Windows.Forms.Label();
             this.Loginbtn = new System.Windows.Forms.Button();
             this.ShowPsswdckbx = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Usuariotxtbx
@@ -95,12 +96,23 @@
             this.ShowPsswdckbx.UseVisualStyleBackColor = true;
             this.ShowPsswdckbx.CheckedChanged += new System.EventHandler(this.ShowPsswdckbx_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(315, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(485, 129);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.ShowPsswdckbx);
             this.Controls.Add(this.Loginbtn);
             this.Controls.Add(this.Psswd);
@@ -124,6 +136,7 @@
         private System.Windows.Forms.Label Psswd;
         private System.Windows.Forms.Button Loginbtn;
         private System.Windows.Forms.CheckBox ShowPsswdckbx;
+        private System.Windows.Forms.Button button1;
     }
 }
 
