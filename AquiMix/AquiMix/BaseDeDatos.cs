@@ -62,5 +62,34 @@ namespace AquiMix
                 return true;
             }
         }
+
+        public Boolean AgregarProducto(string platillo, string precio, string descripcion)
+        {
+
+            SqlConnection conx = new SqlConnection(cadenaConexion);
+
+            conx.Open();
+
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            string uno = "INSERT INTO [dbo].[Menu] ([nomPlatillo], [precio], [descripcion]) VALUES(";
+            string dos = "'" + platillo + "'" + ",";
+            string tres = precio + ",";
+            string cuatro = "'" + descripcion + "'";
+            string cinco = ")";
+            string query = uno + dos + tres + cuatro + cinco;
+
+            command = new SqlCommand(query, conx);
+
+            adapter.InsertCommand = new SqlCommand(query, conx);
+            adapter.InsertCommand.ExecuteNonQuery();
+
+            command.Dispose();
+
+            conx.Close();
+
+            return true;
+        }
     }
 }
