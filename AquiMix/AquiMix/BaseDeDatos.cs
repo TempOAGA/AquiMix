@@ -37,15 +37,17 @@ namespace AquiMix
             SqlParameter parnomus = new SqlParameter("@nomus", nomus);
             SqlParameter parcon = new SqlParameter("@con", con);
 
-            SqlCommand comando = new SqlCommand("select nombre, apellido, nivel from Credenciales where [user] = @nomus and password collate Latin1_General_CS_AS = @con", conx);
+            SqlCommand comando = new SqlCommand("select nombre, apellido, rol, direccion, horario, nivel from Usuarios, Credenciales " +
+                "where nomUser = @nomus and password collate Latin1_General_CS_AS = @con", conx);
             comando.Parameters.Add(parnomus);
             comando.Parameters.Add(parcon);
 
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
             {
-                nombreCompleto = lector.GetString(0) + "" + lector.GetString(1);
-                tipoUsuario = lector.GetString(2);
+                nombreCompleto = lector.GetString(0) + " " + lector.GetString(1) + '\t' +
+                    "Rol: " + lector.GetString(3) + '\n' + lector.GetString(5);
+                tipoUsuario = lector.GetString(5);
             }
 
             lector.Close();
