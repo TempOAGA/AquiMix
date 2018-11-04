@@ -16,7 +16,7 @@ namespace AquiMix
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UpdateProducto());
+            Application.Run(new EliminarProducto());
         }
     }
 }

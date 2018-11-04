@@ -38,5 +38,18 @@ namespace AquiMix
             this.inventarioTableAdapter.Fill(this.aquiMixDataSet.Inventario);
 
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateProducto update = new UpdateProducto();
+            update.Show();
+        }
+
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            EliminarProducto eliminar = new EliminarProducto();
+            eliminar.Show();
+        }
     }
 }

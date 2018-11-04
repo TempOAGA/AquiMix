@@ -69,6 +69,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Modificar";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // cbxMenu
             // 
@@ -81,7 +82,7 @@
             this.cbxMenu.Size = new System.Drawing.Size(229, 29);
             this.cbxMenu.TabIndex = 2;
             this.cbxMenu.ValueMember = "idPlatillo";
-            this.cbxMenu.SelectedIndexChanged += new System.EventHandler(this.cbxMenu_SelectedIndexChanged);
+            this.cbxMenu.SelectionChangeCommitted += new System.EventHandler(this.cbxMenu_SelectionChangeCommitted);
             // 
             // label1
             // 
@@ -123,6 +124,7 @@
             // 
             // rtbxDescripcion
             // 
+            this.rtbxDescripcion.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbxDescripcion.Location = new System.Drawing.Point(134, 220);
             this.rtbxDescripcion.Name = "rtbxDescripcion";
             this.rtbxDescripcion.Size = new System.Drawing.Size(229, 160);

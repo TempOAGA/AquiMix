@@ -11,25 +11,19 @@ using System.Data.SqlClient;
 
 namespace AquiMix
 {
-    public partial class UpdateProducto : Form
+    public partial class EliminarProducto : Form
     {
-        public UpdateProducto()
+        public string id;
+        public EliminarProducto()
         {
             InitializeComponent();
         }
 
-        private void UpdateProducto_Load(object sender, EventArgs e)
+        private void EliminarProducto_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'aquiMixDataSet.Menu' Puede moverla o quitarla según sea necesario.
             this.menuTableAdapter.Fill(this.aquiMixDataSet.Menu);
-            string id = cbxMenu.SelectedValue.ToString();
-            Fill(id);
-        }
 
-        private void cbxMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string id = cbxMenu.SelectedValue.ToString();
-            Fill(id);
         }
 
         public Boolean Fill(string id)
@@ -41,17 +35,16 @@ namespace AquiMix
                 SqlConnection conx = new SqlConnection(cadenaConexion);
                 conx.Open();
 
-                string query = "SELECT [nomPlatillo], [precio], [descripcion] FROM " +
+                string query = "SELECT [precio], [descripcion] FROM " +
                     "[dbo].[Menu] where idPlatillo =" + id + ";";
                 SqlCommand comando = new SqlCommand(query, conx);
 
                 SqlDataReader lector = comando.ExecuteReader();
                 while (lector.Read())
                 {
-                    tbxPlatillo.Text = lector.GetString(0);
-                    double c= lector.GetDouble(1);
+                    double c = lector.GetDouble(0);
                     tbxPrecio.Text = c.ToString();
-                    rtbxDescripcion.Text = lector.GetString(2);
+                    tbxDescripcion.Text = lector.GetString(1);
                 }
                 return true;
             }
@@ -62,24 +55,12 @@ namespace AquiMix
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnRegresar_Click(object sender, EventArgs e)
         {
-            string id = cbxMenu.SelectedValue.ToString();
-            BaseDeDatos bd = new BaseDeDatos();
-
-            Boolean res = bd.ModificarProducto(tbxPlatillo.Text, tbxPrecio.Text, rtbxDescripcion.Text, id);
-
-            if (res)
-            {
-                MessageBox.Show("Su producto fue actualizado con exito!");
-            }
-            else
-            {
-                MessageBox.Show("No se logro actualizar el producto");
-            }
+            this.Close();
         }
 
-        private void cbxMenu_SelectionChangeCommitted(object sender, EventArgs e)
+        private void cbxEliminar_SelectionChangeCommitted(object sender, EventArgs e)
         {
             try
             {
