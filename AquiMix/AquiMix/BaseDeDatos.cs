@@ -91,5 +91,33 @@ namespace AquiMix
 
             return true;
         }
+
+        public Boolean ModificarProducto(string platillo, string precio, string descripcion, string id)
+        {
+            SqlConnection conx = new SqlConnection();
+
+            conx.Open();
+
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            string uno = "UPDATE [dbo].[Menu] SET[nomPlatillo] = ";
+            string dos = "'" + platillo + "'";
+            string tres = ", [precio] =" + precio;
+            string cuatro = ",[descripcion] =" + "'" + descripcion + "'";
+            string cinco = "WHERE idPlatillo = " + id;
+
+            string query = uno + dos + tres + cuatro + cinco;
+
+            command = new SqlCommand(query, conx);
+
+            adapter.UpdateCommand = new SqlCommand(query, conx);
+            adapter.UpdateCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            conx.Close();
+
+            return true;
+        }
     }
 }
