@@ -18,6 +18,8 @@ namespace AquiMix
             InitializeComponent();
         }
 
+    
+
         private void UpdateProducto_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'aquiMixDataSet.Menu' Puede moverla o quitarla según sea necesario.
@@ -81,7 +83,7 @@ namespace AquiMix
 
         private void cbxMenu_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 id = Convert.ToString(cbxEliminar.SelectedValue);
                 Fill(id);
@@ -89,7 +91,7 @@ namespace AquiMix
             catch
             {
                 MessageBox.Show("Error");
-            }
+            }*/
         }
     }
 }
