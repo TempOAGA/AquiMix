@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgregarProducto.Designer.cs">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="AquiMixDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +84,12 @@
     </Compile>
     <Compile Include="Cobro.Designer.cs">
       <DependentUpon>Cobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarProducto.Designer.cs">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="inventario.cs">
       <SubType>Form</SubType>
@@ -84,11 +111,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateProducto.Designer.cs">
+      <DependentUpon>UpdateProducto.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AgregarProducto.resx">
+      <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BienvenidaUsuario.resx">
       <DependentUpon>BienvenidaUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Cobro.resx">
       <DependentUpon>Cobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarProducto.resx">
+      <DependentUpon>EliminarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inventario.resx">
       <DependentUpon>inventario.cs</DependentUpon>
@@ -109,6 +148,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdateProducto.resx">
+      <DependentUpon>UpdateProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="AquiMixDataSet.xsc">
       <DependentUpon>AquiMixDataSet.xsd</DependentUpon>
     </None>
@@ -153,6 +195,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Img\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

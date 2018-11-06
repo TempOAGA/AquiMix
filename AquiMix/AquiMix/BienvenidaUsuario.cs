@@ -18,65 +18,25 @@ namespace AquiMix
         {
             InitializeComponent();
             labelUsuario.Text = BaseDeDatos.nombreCompleto;
-            if(user == "Admin")
-            {
-                //Admingbx.Show();
-                Admingbx.Visible = true;
-                //Gerentegbx.Hide();
-                //Cajerogbx.Hide();
-                Gerentegbx.Visible = false;
-                Cajerogbx.Visible = false;
-            }else if(user == "Gerente")
-            {
-                Admingbx.Visible = false;
-                Gerentegbx.Visible = true;
-                Cajerogbx.Visible = false;
-            }else if(user == "Cajero")
-            {
-                Admingbx.Visible = false;
-                Gerentegbx.Visible = false;
-                Cajerogbx.Visible = true;
-            }
-            /*
-                switch (user)
-                {
-                    case "Admin":
-                        Admingbx.Visible = true;
-                        Gerentegbx.Visible = false;
-                        Cajerogbx.Visible = false;
-                        break;
-                    case "Gerente":
-                        Admingbx.Visible = false;
-                        Gerentegbx.Visible = true;
-                        Cajerogbx.Visible = false;
-                        break;
-                    case "Cajero":
-                        Admingbx.Visible = false;
-                        Gerentegbx.Visible = false;
-                        Cajerogbx.Visible = true;
-                        break;
-                    default:
-                        break;
-                }*/
-            /*   
+               
             if(BaseDeDatos.tipoUsuario == "Administrador")
             {
-                panelAdministrador.Visible = true;
-                panelCajero.Visible = false;
-                panelGerente.Visible = false;
+                Admingbx.Show();
+                Cajerogbx.Hide();
+                Gerentegbx.Hide();
             }
             else if(BaseDeDatos.tipoUsuario == "Gerente")
             {
-                panelAdministrador.Visible = false;
-                panelCajero.Visible = false;
-                panelGerente.Visible = true;
+                Admingbx.Hide();
+                Cajerogbx.Hide();
+                Gerentegbx.Show();
             }
             else if(BaseDeDatos.tipoUsuario == "Cajero")
             {
-                panelAdministrador.Visible = false;
-                panelCajero.Visible = true;
-                panelGerente.Visible = false;
-            }*/
+                Admingbx.Hide();
+                Cajerogbx.Show();
+                Gerentegbx.Hide();
+            }
         }
 
         private void BienvenidaUsuario_FormClosed(object sender, FormClosedEventArgs e)
