@@ -13,6 +13,8 @@ namespace AquiMix
 {
     public partial class UpdateProducto : Form
     {
+        public string id;
+
         public UpdateProducto()
         {
             InitializeComponent();
@@ -28,10 +30,10 @@ namespace AquiMix
             Fill(id);
         }
 
-        private void cbxMenu_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbxMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string id = cbxMenu.SelectedValue.ToString();
-            Fill(id);
+            //string id = cbxMenu.SelectedValue.ToString();
+           // Fill(id);
         }
 
         public Boolean Fill(string id)
@@ -64,7 +66,7 @@ namespace AquiMix
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             string id = cbxMenu.SelectedValue.ToString();
             BaseDeDatos bd = new BaseDeDatos();
@@ -81,17 +83,17 @@ namespace AquiMix
             }
         }
 
-        private void cbxMenu_SelectionChangeCommitted(object sender, EventArgs e)
+        private void CbxMenu_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            /*try
+            try
             {
-                id = Convert.ToString(cbxEliminar.SelectedValue);
+                id = Convert.ToString(cbxMenu.SelectedValue);
                 Fill(id);
             }
             catch
             {
                 MessageBox.Show("Error");
-            }*/
+            }
         }
     }
 }

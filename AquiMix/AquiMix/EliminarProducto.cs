@@ -55,12 +55,12 @@ namespace AquiMix
             }
         }
 
-        private void btnRegresar_Click(object sender, EventArgs e)
+        private void BtnRegresar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void cbxEliminar_SelectionChangeCommitted(object sender, EventArgs e)
+        private void CbxEliminar_SelectionChangeCommitted(object sender, EventArgs e)
         {
             try
             {
@@ -70,6 +70,25 @@ namespace AquiMix
             catch
             {
                 MessageBox.Show("Error");
+            }
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            string id = cbxEliminar.SelectedValue.ToString();
+            BaseDeDatos bd = new BaseDeDatos();
+
+            Boolean res = bd.EliminarProducto(id);
+
+            if (res)
+            {
+                MessageBox.Show("Se elimino el producto con exito.");
+                tbxPrecio.Clear();
+                tbxDescripcion.Clear();
+            }
+            else
+            {
+                MessageBox.Show("No se logro eliminar el producto con exito.");
             }
         }
     }

@@ -22,17 +22,7 @@ namespace AquiMix
 
             SqlConnection conx = new SqlConnection(cadenaConexion);
 
-            try
-            {
-                conx.Open();
-                MessageBox.Show("Se logro");
-                conx.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se logro");
-            }
-            conx.Open();
+            conx.Open(); 
 
             SqlParameter parnomus = new SqlParameter("@nomus", nomus);
             SqlParameter parcon = new SqlParameter("@con", con);
@@ -118,6 +108,27 @@ namespace AquiMix
                 conx.Close();
 
                 return true;
+        }
+        public Boolean EliminarProducto(string id)
+        {
+            SqlConnection conx = new SqlConnection(cadenaConexion);
+
+            conx.Open();
+
+            SqlCommand command;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+
+            string query = "DELETE FROM [dbo].[Menu] WHERE idPlatillo =" + id + ";";
+
+            command = new SqlCommand(query, conx);
+
+            adapter.DeleteCommand = new SqlCommand(query, conx);
+            adapter.DeleteCommand.ExecuteNonQuery();
+
+            command.Dispose();
+            conx.Close();
+
+            return true;
         }
     }
 }

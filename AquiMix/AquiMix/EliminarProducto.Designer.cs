@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbxEliminar = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.aquiMixDataSet = new AquiMix.AquiMixDataSet();
             this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aquiMixDataSet = new AquiMix.AquiMixDataSet();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuTableAdapter = new AquiMix.AquiMixDataSetTableAdapters.MenuTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,8 +40,8 @@
             this.tbxDescripcion = new System.Windows.Forms.TextBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnRegresar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.aquiMixDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aquiMixDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxEliminar
@@ -55,7 +55,17 @@
             this.cbxEliminar.Size = new System.Drawing.Size(233, 29);
             this.cbxEliminar.TabIndex = 0;
             this.cbxEliminar.ValueMember = "idPlatillo";
-            this.cbxEliminar.SelectionChangeCommitted += new System.EventHandler(this.cbxEliminar_SelectionChangeCommitted);
+            this.cbxEliminar.SelectionChangeCommitted += new System.EventHandler(this.CbxEliminar_SelectionChangeCommitted);
+            // 
+            // menuBindingSource
+            // 
+            this.menuBindingSource.DataMember = "Menu";
+            this.menuBindingSource.DataSource = this.aquiMixDataSet;
+            // 
+            // aquiMixDataSet
+            // 
+            this.aquiMixDataSet.DataSetName = "AquiMixDataSet";
+            this.aquiMixDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -66,16 +76,6 @@
             this.label1.Size = new System.Drawing.Size(157, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre del Platillo";
-            // 
-            // aquiMixDataSet
-            // 
-            this.aquiMixDataSet.DataSetName = "AquiMixDataSet";
-            this.aquiMixDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // menuBindingSource
-            // 
-            this.menuBindingSource.DataMember = "Menu";
-            this.menuBindingSource.DataSource = this.aquiMixDataSet;
             // 
             // menuTableAdapter
             // 
@@ -129,6 +129,7 @@
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // btnRegresar
             // 
@@ -139,7 +140,7 @@
             this.btnRegresar.TabIndex = 9;
             this.btnRegresar.Text = "Regresar";
             this.btnRegresar.UseVisualStyleBackColor = true;
-            this.btnRegresar.Click += new System.EventHandler(this.btnRegresar_Click);
+            this.btnRegresar.Click += new System.EventHandler(this.BtnRegresar_Click);
             // 
             // EliminarProducto
             // 
@@ -158,8 +159,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Eliminar Producto";
             this.Load += new System.EventHandler(this.EliminarProducto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.aquiMixDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aquiMixDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

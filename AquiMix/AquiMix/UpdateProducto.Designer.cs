@@ -69,7 +69,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Modificar";
             this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
             // 
             // cbxMenu
             // 
@@ -82,7 +82,7 @@
             this.cbxMenu.Size = new System.Drawing.Size(229, 29);
             this.cbxMenu.TabIndex = 2;
             this.cbxMenu.ValueMember = "idPlatillo";
-            this.cbxMenu.SelectionChangeCommitted += new System.EventHandler(this.cbxMenu_SelectionChangeCommitted);
+            this.cbxMenu.SelectionChangeCommitted += new System.EventHandler(this.CbxMenu_SelectionChangeCommitted);
             // 
             // label1
             // 
